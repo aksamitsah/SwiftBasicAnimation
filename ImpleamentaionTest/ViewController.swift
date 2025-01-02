@@ -31,13 +31,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         animatedViews.forEach { view, position in
             self.view.addSubview(view)
-//            view.animate(to: position.nextPosition) // Simpler animation
+            // view.animate(to: position.nextPosition) // Simpler animation
             view.animateAlongPath(to: position.nextPosition) // Scalable and path-based animation
         }
     }
+    
 }
 
 
