@@ -1,3 +1,14 @@
+
+
+## 📱 Screenshots - iPhone
+
+<div align='center'>
+  <img src="https://github.com/user-attachments/assets/48a33d53-9f76-4463-a5ee-106bba17dfeb" width="240">
+</div>
+
+
+## Code
+
 ```
 
 private lazy var animatedViews: [(UIView, UIView.TargetPosition)] = [
