@@ -35,11 +35,14 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animatedViews.forEach { view, position in
-            self.view.addSubview(view)
-            // view.animate(to: position.nextPosition) // Simpler animation
-            view.animateAlongPath(to: position.nextPosition) // Scalable and path-based animation
-        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            self?.animatedViews.forEach { view, position in
+                self?.view.addSubview(view)
+                // view.animate(to: position.nextPosition) // Simpler animation
+                view.animateAlongPath(to: position.nextPosition) // Scalable and path-based animation
+            }
+         }
+        
     }
     
 }
